@@ -1,54 +1,302 @@
-body{
-    background: #999;
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.caption{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-align: right;
+    color: #ffffff;
+}
+
+p, h1 {margin: 0;}
+h1 {margin-bottom: 0.2em;}
+p {line-height: 1.333em}
+
+#slide-3 .caption{
+    left: 5%;
+    right: auto;
+    color: #47373f;
+    text-align: left;
+}
+
+#slide-4 .caption{
+    left: 5%;
+    right: auto;
+    top: 5%;
+    bottom: auto;
+    color: #47373f;
+}
+
+#slides-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slides{
+    width: 303%;
+    height: 303%;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: 33%;
+}
+
+#slide-1{
+    background: url("../images/anime-1.jpg") no-repeat center center;
+    background-size: cover;
+
+}
+#slide-2{
+    background: url("../images/anime-2.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(0,100%);
+    -ms-transform: translate(0,100%);
+    transform: translate(0,100%);
+}
+#slide-3{
+    background: url("../images/anime-3.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(0,200%);
+    -ms-transform: translate(0,200%);
+    transform: translate(0,200%);
+}
+#slide-4{
+    background: url("../images/anime-4.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(100%,200%);
+    -ms-transform: translate(100%,200%);
+    transform: translate(100%,200%);
+}
+#slide-5{
+    background: url("../images/anime-5.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(200%,200%);
+    -ms-transform: translate(200%,200%);
+    transform: translate(200%,200%);
+}
+#slide-6{
+    background: url("../images/anime-6.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(200%,100%);
+    -ms-transform: translate(200%,100%);
+    transform: translate(200%,100%);
+}
+#slide-7{
+    background: url("../images/anime-7.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(200%,0);
+    -ms-transform: translate(200%,0);
+    transform: translate(200%,0);
+}
+#slide-8{
+    background: url("../images/anime-8.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(100%,0);
+    -ms-transform: translate(100%,0);
+    transform: translate(100%,0);
+}
+#slide-9{
+    background: url("../images/anime-9.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(100%,100%);
+    -ms-transform: translate(100%,100%);
+    transform: translate(100%,100%);
+}
+
+#helper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 400%;
+    width: 20px;
+}
+
+.marker{
+    height: 25%;
+    width: 100%;
+}
+
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    background-color: purple;
+}
+.orange{
+    background-color: orange;
+}
+.bluegreen{
+    background-color: lightseagreen;
+}
+.pink{
+    background-color: deeppink;
+}
+.violet{
+    background-color: violet;
+}
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
     margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }
 
-header{
-    background: black;
-    color: greenyellow;
-    padding: 15px 15px 15px;
+.invisible {
+    visibility: hidden;
 }
 
-header h1{
-    margin: 0;
-    display: inline;
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-nav ul{
-    margin: 0;
-    display: inline;
-    padding: 0 0 0 400px;
-}
-
-nav ul li{
-    display: inline-block;
-    list-style-type: none;
-    background: #585859;
-    color: cornflowerblue;
-    padding: 5px 15px;
-}
-
-nav ul li a{
-    color: greenyellow;
-}
-
-
-
-.row:after{
+.clearfix:after {
     clear: both;
 }
 
-.col{
-    background: cyan;
-    border-radius: 5px;
-    padding: 10px .5px;
-    float: left;
-    margin: 1%;
-    width: 30%;
-
+.clearfix {
+    *zoom: 1;
 }
 
-footer{
-    clear: both;
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
 }
 
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
